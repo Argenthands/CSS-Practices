@@ -1,0 +1,1 @@
+# [Ejercicio](https://www.youtube.com/watch?v=RD1BqsG8GBw&ab_channel=EDteam)
