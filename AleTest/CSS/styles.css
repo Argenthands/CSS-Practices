@@ -1,0 +1,21 @@
+:root{
+    --primary-font-color: #e4d791;
+    --primary-background-color: radial-gradient(79.43% 251.58% at 23.18% 73.07%, #0142a0 0, #0f133a 44.41%, #101034 56.43%, #301436 100%, #411958 0);
+    --secondary-font-color: #0555a5;
+    --secondary-background-color: radial-gradient(79.43% 251.58% at 23.18% 73.07%, #f1f2af 0, #f5f33a 44.41%, #f1f134 56.43%, #f3f436 100%, #f4f9a8 0);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&family=Orbitron:wght@600&display=swap');
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    background: var(--primary-background-color);
+}
+@media screen and (max-width: 1024px) {
+    html, body {
+        background: var(--secondary-background-color);
+    }
+}
