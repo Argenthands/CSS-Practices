@@ -1,0 +1,94 @@
+*,
+::after,
+::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --main-color: #efe;
+    --main-background: #182848;
+    --neon-fuxia: #ff00c1;
+    --neon-acua: #00fff9;
+    --neon-purple: #9600ff;
+    --neon-blue: #4900ff;
+    --neon-light-blue: #00b8ff;
+}
+
+body {
+    min-height: 100vh;
+    width: 100%;
+    color: var(--main-color);
+    background: var(--main-background);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button {
+    border: none;
+    position: relative;
+    border-radius: 10px;
+    cursor: pointer;
+    background: var(--main-background);
+    padding: 2em 4em;
+    font-family: sans-serif;
+}
+
+a {
+    text-decoration: none;
+    font-size: calc(1.5rem, 2.5vh, 2.5rem);
+    background: linear-gradient(-45deg, var(--neon-fuxia), var(--neon-acua));
+    -webkit-backdrop-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+button::after,
+button::before {
+    content: "";
+    position: absolute;
+    background: linear-gradient(var(--rotate),
+            var(--neon-fuxia)0%,
+            var(--neon-purple)25%,
+            var(--neon-blue)50%,
+            var(--neon-light-blue)80%,
+            var(--neon-acua)100%);
+    width: 105%;
+    height: 110%;
+    left: -2.5%;
+    top: -5%;
+    z-index: -1;
+    border-radius: 10px;
+    transition: --rotate 9999s linear;
+}
+
+button:hover:after,
+button:hover::before {
+    --rotate: 3600deg;
+    transition: --rotate 20s linear;
+}
+
+button:hover::before {
+    animation: fade 1.2s;
+}
+
+@property --rotate {
+    syntax: "<angle>";
+    initial-value: 130deg;
+    inherits: false;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+        filter: blur(10px);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(1.4);
+        filter: blur(10px);
+    }
+}
