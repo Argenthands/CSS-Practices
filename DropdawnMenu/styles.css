@@ -1,0 +1,12 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --main-background: #5c4d3e;
+}
+body{
+    background: var(--main-background);
+    font-family: 'Roboto', sans-serif;
+}
