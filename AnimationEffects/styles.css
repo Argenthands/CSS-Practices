@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --main-background: #102626;
+    --secondary-background: #0d2323;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: var(--main-background);
+}
+.container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.container .loader{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: var(--secondary-background);
+}
+.container .loader ::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(to top, transparent, rgba(0, 255, 249, 0));
+}

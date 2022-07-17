@@ -1,0 +1,55 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    --main-color: #102626;
+}
+div{
+    border: 1px solid lightgrey;
+    border-radius: 100px;
+    width: 100px;
+    height: 100px;
+    padding: 50px;
+    margin: 10px 5px;
+}
+div#linear{
+    /*
+    background-image: linear-gradient(to bottom, blue, red, yellow);
+    background-image: linear-gradient(to bottom right, blue, red, yellow);
+    background-image: linear-gradient(to bottom left, blue, red, yellow);
+
+    background-image: linear-gradient(to top, blue, red, yellow);
+    background-image: linear-gradient(to top right, blue, red, yellow);
+    background-image: linear-gradient(to top left, blue, red, yellow);
+
+    background-image: linear-gradient(to left, blue, red, yellow);
+    background-image: linear-gradient(to left top, blue, red, yellow);
+    background-image: linear-gradient(to left bottom, blue, red, yellow);
+
+    background-image: linear-gradient(to right, blue, red, yellow);
+    background-image: linear-gradient(to right top, blue, red, yellow);
+    background-image: linear-gradient(to right bottom, blue, red, yellow);
+
+    background-image: linear-gradient(150deg, blue 10%, red 40%, yellow 50% , red 60%, blue 90%);
+
+    */
+    background-image: repeating-linear-gradient(295deg, blue 5%, red 10%, yellow 20%);
+}
+div#radiant{
+    /*
+    background-image: radial-gradient(circle at top left, blue, red, yellow);
+    background-image: radial-gradient(circle at top right, blue, red, yellow);
+
+    background-image: radial-gradient(circle at bottom left, blue, red, yellow);
+    background-image: radial-gradient(circle at bottom right, blue, red, yellow);
+
+    background-image: radial-gradient(circle at center, blue, red, yellow 85%);
+    
+    background-image: repeating-radial-gradient(closest-side at 150px 120px, blue, red, yellow);
+    background-image: repeating-radial-gradient(closest-corner at 150px 120px, blue, red, yellow);
+    background-image: repeating-radial-gradient(farthest-side at 150px 120px, blue, red, yellow);
+    background-image: repeating-radial-gradient(farthest-corner at 150px 120px, blue, red, yellow);
+    */
+}
