@@ -1,0 +1,73 @@
+@import url(
+    "htttp://fonts.googleapis.com/css?family=Poppins:300,400,600,700,800,900&display=swap"
+    );
+:root{
+    --main-background: #27282c;
+    --secondary-background: #444;
+    --main-color: #fff;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    gap: 10vh;
+    background: var(--main-background);
+}
+a{
+    position: relative;
+    background: var(--secondary-background);
+    color: var(--main-color);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    letter-spacing: 0.1em;
+    font-weight: 400;
+    padding: 1em 3em;
+    transition: 0.5s;
+}
+a:hover{
+    letter-spacing: 0.25em;
+    background: var(--clr);
+    color: var(--clr);
+    box-shadow: 0 0 35px var(--clr);
+}
+a::before{
+    content: "";
+    position: absolute;
+    inset: 2px;
+    background: var(--main-background);
+}
+a span{
+    position: relative;
+    z-index: 1;
+}
+a i{
+    position: absolute;
+    inset: 0;
+    display: block;
+}
+a i::before{
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: var(--main-background);
+    border: 2px solid var(--clr);
+    border-radius: 5%;
+    inset: -1.3em 0 0 7.3em;
+    transition: 0.5s;
+}
+
+a:hover i::before{
+    left: -3.3em;
+    transform: rotate(45deg);
+    box-shadow: 51px 51px var(--clr);
+}
