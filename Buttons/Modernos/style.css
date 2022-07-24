@@ -18,7 +18,7 @@ body{
     align-items: center;
     flex-direction: column;
     min-height: 100vh;
-    gap: 10vh;
+    gap: 25vh;
     background: var(--main-background);
 }
 a{
@@ -57,17 +57,35 @@ a i{
 a i::before{
     content: "";
     position: absolute;
-    width: 15px;
-    height: 15px;
+    top: -33px;
+    left: 150%;
+    transform: translate(50%);
+    width: 2vh;
+    height: 2vh;
     background: var(--main-background);
     border: 2px solid var(--clr);
-    border-radius: 5%;
-    inset: -1.3em 0 0 7.3em;
-    transition: 0.5s;
+    transition: 0.9s;
+}
+a:hover i::before{
+    left: -3.4em;
+    transform: rotate(45deg);
+    box-shadow: 51.5px 51.5px var(--clr);
 }
 
-a:hover i::before{
-    left: -3.3em;
+a i::after{
+    content: "";
+    position: absolute;
+    bottom: -35px;
+    left: 0;
+    transform: translate(-450%);
+    width: 2vh;
+    height: 2vh;
+    background: var(--main-background);
+    border: 2px solid var(--clr);
+    transition: 0.9s;
+}
+a:hover i::after{
+    left: 8.1em;
     transform: rotate(45deg);
-    box-shadow: 51px 51px var(--clr);
+    box-shadow: -51.5px -51.5px var(--clr);
 }
