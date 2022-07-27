@@ -53,6 +53,17 @@ button{
     border-radius: 5px;
     cursor: pointer;
 }
+input{
+    background: var(--primary);
+    color: var(--text);
+    border: none;
+    padding: 10px;
+    margin: 20px 5px 10px 30px;
+    font-family: var(--main-font);
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+}
 
 /* Estilos del switch */
 
