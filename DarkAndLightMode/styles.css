@@ -3,12 +3,18 @@
 }
 [data-theme="light"]{
     --primary: #2a83d6;
+    --secondary: #4c99d9;
+    --brightness: #7f99d9;
+    --shadow: #1962b3;
     --background: #fafafa;
     --text: #333;
     --title: #1a2b3c;
 }
 [data-theme="dark"]{
     --primary: #e9833e;
+    --secondary: #f9a852;
+    --brightness: #ffb979;
+    --shadow: #c7622b;
     --background: #333;
     --text: #fafafa;
     --title: #a1b2c3;
@@ -64,7 +70,6 @@ input{
     border-radius: 5px;
     cursor: pointer;
 }
-
 /* Estilos del switch */
 
 .switch {
@@ -79,7 +84,7 @@ input{
     width: 0;
     height: 0;
 }
-  
+
 .slider {
     position: absolute;
     cursor: pointer;
@@ -92,7 +97,7 @@ input{
     transition: .4s;
     border-radius: 34px;
 }
-  
+
 .slider:before {
     position: absolute;
     content: "";
@@ -109,9 +114,65 @@ input{
 input:checked + .slider {
     background-color: var(--background);
 }
-  
+
 input:checked + .slider:before {
     -webkit-transform: translateX(26px);
     -ms-transform: translateX(26px);
     transform: translateX(26px);
+}
+
+/* Input Range */
+.range-container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px;
+    width: 90vw;
+    background: linear-gradient(to top, var(--primary), var(--secondary));
+    border-radius: 40px;
+    box-shadow: 15px 15px 20px var(--shadow), 15px -15px 20px var(--shadow);
+}
+.range{
+    width: 100%;
+    height: 1px;
+    outline: none;
+    appearance: none;
+    background: var(--background);
+    border-radius: 40px;
+    padding: 9px 0 9px 0;
+    margin: 20px 35px;
+    border-radius: 95px;
+    border: 1px solid var(--text);
+    box-shadow: 
+        5px 5px 5px var(--shadow),
+        -5px -5px 5px var(--shadow),
+        inset 5px 5px 5px var(--brightness), 
+        inset -5px -5px 5px var(--brightness);
+    overflow: hidden;
+}
+.range::-webkit-slider-thumb{
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    background: radial-gradient(circle, var(--primary), var(--secondary));
+    border-radius: 50%;
+    border: 1px solid var(--text);
+    box-shadow: 50vw 0 0 50vw var(--title);
+}
+#range-value{
+    position: relative;
+    text-align: center;
+    width: 15vw;
+    font-size: 1.7em;
+    color: var(--text);
+    background: var(--background);
+    border-radius: 40px;
+    border: 1px solid var(--text);
+    box-shadow: 
+    5px 5px 5px var(--shadow),
+    -5px -5px 5px var(--shadow),
+    inset 5px 5px 5px var(--brightness), 
+    inset -5px -5px 5px var(--brightness);
+    margin: 0 15px 0 0;
 }
