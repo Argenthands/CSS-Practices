@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:wight@300,400,500,600,700,800,900&display=swao");
+:root{
+    --main-background: #1d2b3a;
+    --main-color: #fff;
+    --primary-color: #00dfc4;
+    --secondary-color: rgba(255, 255, 255, 0.25);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    background: var(--main-background);
+}
+label{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 50px;
+}
+.inputBox{
+    position: relative;
+    width: 250px;
+}
+.inputBox input{
+    width: 100%;
+    padding: 15px;
+    margin: 15px 0;
+    background: var(--main-background);
+    border: 1px solid var(--secondary-color);
+    border-radius: 5px;
+    outline: none;
+    color: #fff;
+    font-size: 1em;
+    transition: 0.7s;
+}
+.inputBox span{
+    position: absolute;
+    left: 0;
+    padding: 10px;
+    pointer-events: none;
+    font-size: 1em;
+    color: var(--secondary-color);
+    text-transform: uppercase;
+    transition: 0.7s;
+}
+
+/* Variante 1 */
+.inputBox input:valid ~ span,
+.inputBox input:focus ~ span{
+    color: var(--primary-color);
+    transform: translateX(7px) translateY(-30px);
+    font-size: 0.68em;
+    padding: 0 10px;
+    background: var(--main-background);
+    border-left: 1px solid var(--primary-color);
+    border-right: 1px solid var(--primary-color);
+    letter-spacing: 0.2em;
+}
+/* Variante 2 */
+.inputBox:nth-child(2) input:valid ~ span,
+.inputBox:nth-child(2) input:focus ~ span{
+    color: var(--primary-color);
+    transform: translateX(7px) translateY(-30px);
+    font-size: 0.68em;
+    padding: 0 10px;
+    background: var(--primary-color);
+    color: var(--main-background);
+    border-radius: 5px;
+    letter-spacing: 0.2em;
+}
+
+.inputBox input:valid,
+.inputBox input:focus{
+    border-color: var(--primary-color);
+}
