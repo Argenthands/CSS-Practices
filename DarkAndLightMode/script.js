@@ -17,5 +17,11 @@ slider.addEventListener('click', () => {
 setThheme(localStorage.getItem('theme') || preferedColorScheme);
 
 /* Script input range value*/
-const inputRange = document.getElementsByClassName('range')
-console.log('range',inputRange)
+function changeRangeValue(value) {
+    document.getElementById('range-value').innerHTML = value;
+}
+document.getElementsByClassName('range')[0].addEventListener('input', function () {
+    changeRangeValue(this.value);
+}, false);
+
+//const rangeValue = document.getElementsByClassName('range')[0].value;
