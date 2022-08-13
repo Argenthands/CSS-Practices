@@ -1,0 +1,63 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+}
+:root{
+    --main-color: #4900ff;
+    --second-color: #9600ff;
+    --main-background-color: #001300;
+}
+#container{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    background: var(--main-background-color);
+}
+.dot{
+    position: relative;
+    width: 40px;
+    height: 40px;
+    padding: 5px;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.dot::after{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: var(--main-color);
+    transform: scale(0.1);
+    border-radius: 50%;
+    box-shadow: 
+        0 0 0 5px var(--main-color),
+        0 0 0 10px var(--main-color),
+        0 0 0 20px var(--main-color),
+        0 0 0 40px var(--main-color),
+        0 0 0 60px var(--main-color),
+        0 0 0 80px var(--main-color),
+    ;
+    transition: all 2s ease-in-out;
+}
+.dot:hover::after{
+    transform: scale(0.65);
+    transition: all 0.1s ease-in-out;
+    background: var(--second-color);
+    box-shadow: 
+        0 0 0 5xpx var(--second-color),
+        0 0 0 10px var(--second-color),
+        0 0 0 20px var(--second-color),
+        0 0 0 40px var(--second-color),
+        0 0 0 60px var(--second-color),
+        0 0 0 80px var(--second-color),
+    ;
+}
