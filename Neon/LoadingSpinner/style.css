@@ -1,0 +1,96 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --top-color: #24ecff;
+    --top-shadow-color: #24ecff33;
+    --bottom-color: #93ff2d;
+    --bottom-shadow-color: #93ff2d33;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #111;
+
+}
+#container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+#container .ring{
+    position: relative;
+    width: 150px;
+    height: 150px;
+    margin: -33px;
+    border-radius: 50%;
+    border: 1px solid transparent;
+    border-top: 4px solid var(--top-color);
+    animation: animate 2s linear infinite;
+}
+#container .ring::before{
+    content: "";
+    position: absolute;
+    top: 25px;
+    right: 5px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: var(--top-color);
+    box-shadow:
+        0 0 0 3px var(--top-shadow-color),
+        0 0 0 6px var(--top-shadow-color),
+        0 0 0 12px var(--top-shadow-color),
+        0 0 15px var(--top-color),
+        0 0 25px var(--top-color);
+}
+@keyframes animate{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+#container .ring:nth-child(2)::before{
+    bottom: 20px;
+    left: 2px;
+    background: var(--bottom-color);
+    box-shadow:
+        0 0 0 3px var(--bottom-shadow-color),
+        0 0 0 6px var(--bottom-shadow-color),
+        0 0 0 12px var(--bottom-shadow-color),
+        0 0 15px var(--bottom-color),
+        0 0 25px var(--bottom-color);
+}
+#container .ring:nth-child(2){
+    animation: animate2 2s linear infinite;
+}
+@keyframes animate2{
+    0%{
+        transform: rotate(360deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+#container .ring:nth-child(3){
+    position: absolute;
+    top: -66.66px;
+    border-radius: 50%;
+
+}
+#container p{
+    position: absolute;
+    color: #fff;
+    font-size: 1.5em;
+    font-family: consolas;
+    bottom: -80px;
+    letter-spacing: 0.15em;
+}
