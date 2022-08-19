@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --main-background: #111;
+    --cheked-background: #20b7ff;
+    --uncheked-background: #333;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    min-height: 100vh;
+    background-color: var(--main-background);
+}
+input[type="radio"]{
+    position: relative;
+    width: 120px;
+    height: 40px;
+    margin: 10px;
+    outline: none;
+    background: var(--uncheked-background);
+    -webkit-appearance: none;
+    cursor: pointer;
+}
+input[type="radio"]:checked{
+    background: var(--cheked-background);
+}
