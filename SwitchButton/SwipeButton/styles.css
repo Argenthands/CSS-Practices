@@ -1,0 +1,55 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+:root{
+    --main-background-color: #28272a;
+    --background-btn: rgba(255,255,255,0.1);
+    --color-btn: rgba(255,255,255,0.7);
+    --color-btn-hover: rgba(255,255,255,1);
+    --border-btn: 1px solid rgba(255,255,255,0.35);
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--main-background-color);
+}
+.btn{
+    position: relative;
+    width: 200px;
+    height: 60px;
+    background: var(--background-btn);
+    border-radius: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-btn);
+    text-decoration: none;
+    letter-spacing: 2px;
+    border-top: var(--border-btn);
+    border-left: var(--border-btn);
+    padding-left: 40px;
+    transition: 0.6s;
+}
+.btn:hover{
+    padding-left: 0;
+    padding-right: 40px;
+    color: var(--color-btn-hover);
+}
+.btn span{
+    position: absolute;
+    left: 5px;
+    width: 50px;
+    height: 50px;
+    background: #04fe4d;
+    border-radius: 50%;
+    transition: 0.5s ease-in-out;
+}
+.btn:hover span{
+    left: calc(100% - 55px);
+}
