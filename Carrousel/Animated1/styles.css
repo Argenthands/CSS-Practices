@@ -1,0 +1,90 @@
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #222;
+}
+.conteiner{
+    position: relative;
+    height: 150px;
+    width: 300px;
+    perspective: 250px;
+}
+.card{
+    position: absolute;
+    height: 80%;
+    width: 30%;
+    background: #442222;
+    font-size: 40px;
+    top: 135px;
+    left: 525px;
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
+
+    animation: Carousel 8s linear infinite;
+}
+
+@keyframes Carousel{
+    from{
+        transform: rotateY(360deg) translateZ(600px);
+        z-index: 10;
+        opacity: 0.9;
+    }
+    50%{
+        z-index: -10;
+    }
+    to{
+        transform: rotateY(0deg) translateZ(600px);
+    }
+}
+
+#Pegaso{
+    background-image: url(./img/Pegaso.png);
+    background-size: contain;
+    background-position: center;
+    animation-delay: 4s;
+}
+#Pegaso:hover{
+    box-shadow: 0 0 100px white;
+}
+#Cisne{
+    background-image: url(./img/Cisne.png);
+    background-size: cover;
+    animation-delay: 3s;
+}
+#Cisne:hover{
+    box-shadow: 0 0 100px lightblue;
+}
+#Andromeda{
+    background-image: url(./img/Andromeda.png);
+    background-size: cover;
+    animation-delay: 2s;
+}
+#Andromeda:hover{
+    box-shadow: 0 0 100px pink;
+}
+#Dragon{
+    background-image: url(./img/Dragon.png);
+    background-size: cover;
+    animation-delay: 1s;
+}
+#Dragon:hover{
+    box-shadow: 0 0 100px greenyellow;
+}
+#Fenix{
+    background-image: url(./img/Fenix.png);
+    background-size: cover;
+}
+#Fenix:hover{
+    box-shadow: 0 0 100px red;
+}
+
+.card h3{
+    color: white;
+    font-size: 25px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-top: 495px;
+    background-color: #ff0000;
+}
